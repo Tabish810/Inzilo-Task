@@ -1,0 +1,11 @@
+.header-heading {
+  background-color: rgb(83, 182, 151);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+span{
+  &:hover{
+    cursor: pointer;
+    color: rgb(83, 182, 151);
+  }
+}
