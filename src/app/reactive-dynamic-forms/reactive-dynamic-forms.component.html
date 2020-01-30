@@ -1,0 +1,30 @@
+<div class="container">
+  <form [formGroup]="myform">
+    <div class="row">
+      <div class="col-md-4 form-group">
+        <input type="text" class="form-control" placeholder="Name" formControlName="name">
+      </div>
+      <div class="col-md-4 form-group">
+        <input type="number" class="form-control" placeholder="my age" formControlName="age">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" (click)="addRow()">Add</button>
+      </div>
+    </div>
+    <div *ngFor="let item of f.controls; i as index">
+      <div class="row" [formGroup]="item">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="address1" formControlName="address1">
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="address 2" formControlName="address2">
+          <button class="btn btn-primary ml-2" (click)="deleteRow(index)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="submit()">Save</button>
+      <button class="btn btn-warning" (click)="update()">update</button>
+    </div>
+  </form>
+</div>

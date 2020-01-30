@@ -1,25 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PricingOptionsComponent } from './pricing-options/pricing-options.component';
 import { DataTablesModule } from 'angular-datatables';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ReactiveDynamicFormsComponent } from './reactive-dynamic-forms/reactive-dynamic-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PricingOptionsComponent,
+    LifecycleHooksComponent,
+    ReactiveDynamicFormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     DataTablesModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
   providers: [],
 
